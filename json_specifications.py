@@ -1,10 +1,9 @@
 import json
 
+
 with open('response.json', 'r') as f:
-    data = json.load (f)
+    data = json.load(f)
 
+for item in data['results']['search_results']:
+    print(item['ProductName'], item['Price'])
 
-print('results')
-
-# for item in data['results']:
-#     print(item['ProductName'])
